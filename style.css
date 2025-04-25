@@ -1,0 +1,219 @@
+/* ---------------------------------- */
+/* 🌐 Базовые переменные и утилиты   */
+/* ---------------------------------- */
+
+:root {
+    /* Цвета */
+    --color-bg: #ffffff;
+    --color-text: #111111;
+    --color-primary: #005cff;
+    --color-accent: #ff005c;
+    --color-muted: #888888;
+
+    /* Типографика */
+    --font-main: 'Arial', sans-serif;
+    --font-size-base: 16px;
+    --font-size-lg: 1.25rem;
+    --font-size-sm: 0.875rem;
+
+    /* Контейнер и отступы */
+    --container-width: 1200px;
+    --gutter: 1rem;
+
+    /* Радиусы и тени */
+    --radius: 8px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    /* Переходы */
+    --transition: 0.3s ease;
+}
+
+/* ---------------------------------- */
+/* 🧱 Базовые стили                  */
+/* ---------------------------------- */
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-main);
+    font-size: var(--font-size-base);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+img,
+picture,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+/* ---------------------------------- */
+/* 📦 Контейнер и сетка             */
+/* ---------------------------------- */
+
+.container {
+    max-width: var(--container-width);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+}
+
+/* Гибкая сетка */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: calc(var(--gutter) / -2);
+}
+
+.col {
+    padding-inline: calc(var(--gutter) / 2);
+    flex: 1 1 100%;
+}
+
+@media (min-width: 768px) {
+    .col-6 {
+        flex: 0 0 50%;
+    }
+
+    .col-4 {
+        flex: 0 0 33.333%;
+    }
+
+    .col-3 {
+        flex: 0 0 25%;
+    }
+}
+
+/* ---------------------------------- */
+/* 🛠️ Утилиты                       */
+/* ---------------------------------- */
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-muted {
+    color: var(--color-muted);
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.mt-1 {
+    margin-top: 0.5rem;
+}
+
+.mt-2 {
+    margin-top: 1rem;
+}
+
+.mt-3 {
+    margin-top: 2rem;
+}
+
+.p-1 {
+    padding: 0.5rem;
+}
+
+.p-2 {
+    padding: 1rem;
+}
+
+.p-3 {
+    padding: 2rem;
+}
+
+.radius {
+    border-radius: var(--radius);
+}
+
+.shadow {
+    box-shadow: var(--shadow);
+}
+
+/* ---------------------------------- */
+/* 🔘 Кнопки и формы                */
+/* ---------------------------------- */
+
+button,
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: var(--radius);
+    background-color: var(--color-primary);
+    color: white;
+    transition: background-color var(--transition);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover,
+.btn:hover {
+    background-color: var(--color-accent);
+}
+
+input,
+textarea,
+select {
+    font: inherit;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: var(--radius);
+    width: 100%;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
