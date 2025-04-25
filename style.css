@@ -4,8 +4,8 @@
 
 :root {
     /* Цвета */
-    --color-bg: #ffffff;
-    --color-text: #111111;
+    --color-bg: #000000;
+    --color-text: #ffffff;
     --color-primary: #005cff;
     --color-accent: #ff005c;
     --color-muted: #888888;

@@ -1,21 +1,87 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Starter</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="/styles/normalize.css" />
+  <link rel="stylesheet" href="/styles/index.css" />
 </head>
+
 <body>
-  <header class="header">
-    <h1>Мой быстрый шаблон</h1>
-  </header>
-
   <main class="main">
-    <p>Готово к работе!</p>
-  </main>
+    <section class="animated-headline">
+      <video class="bg-video" src="/assets/video.mp4" autoplay loop muted playsinline></video>
+    
+      <svg class="mask-svg" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <mask id="hole-mask">
+            <rect x="0" y="0" width="100%" height="100%" fill="white" />
+            <rect class="hole" x="0" y="0" width="0" height="0" fill="black" />
+            <rect class="hole" x="0" y="0" width="0" height="0" fill="black" />
+            <rect class="hole" x="0" y="0" width="0" height="0" fill="black" />
+            <rect class="hole" x="0" y="0" width="0" height="0" fill="black" />
+            <rect class="hole" x="0" y="0" width="0" height="0" fill="black" />
+          </mask>
+        </defs>
+        <rect x="0" y="0" width="100%" height="100%" fill="black" mask="url(#hole-mask)" />
+      </svg>
+    
+      <div class="headline-content headline--desktop">
+        <div class="text-row">
+          <span class="text">We’re here</span>
+          <span class="window"></span>
+          <span class="text">to make</span>
+        </div>
+        <div class="text-row">
+          <span class="text">healthy</span>
+          <span class="window"></span>
+          <span class="text">living effortless,</span>
+        </div>
+        <div class="text-row">
+          <span class="text">so you can</span>
+          <span class="window"></span>
+          <span class="text">live longer</span>
+        </div>
+        <div class="text-row">
+          <span class="text">and happier</span>
+          <span class="window"></span>
+        </div>
+      </div>
+    
+      <div class="headline-content headline--mobile">
+        <div class="text-row">
+          <span class="text">We’re here</span>
+          <span class="window"></span>
+        </div>
+        <div class="text-row">
+          <span class="text">to</span>
+          <span class="window"></span>
+          <span class="text">make</span>
+        </div>
+        <div class="text-row">
+          <span class="text">healthy</span>
+          <span class="window"></span>
+          <span class="text">living effortless,</span>
+        </div>
+        <div class="text-row">
+          <span class="text">so you can</span>
+          <span class="window"></span>
+          <span class="text">live longer</span>
+        </div>
+        <div class="text-row">
+          <span class="text">and happier</span>
+          <span class="window"></span>
+        </div>
+      </div>
+    </section>
+    
+</html>
+</main>
 
-  <script type="module" src="script.js"></script>
+<script type="module" src="script.js"></script>
 </body>
+
 </html>
